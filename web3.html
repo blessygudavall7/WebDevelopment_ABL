@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo - Travel Booking</title>
+    <link rel="stylesheet" href="web3.css">
+</head>
+<body>
+    <header>
+        <h1>✈ TravelGo</h1>
+        <p>Your Journey, Your Way</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Book Tickets</a>
+        <a href="#services">Services</a>
+        <a href="#fares">Fare Details</a>
+        <a href="#seats">Select Seats</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Explore the World with TravelGo</h2>
+            <p>Plan your journey, compare fares, and choose your seats.</p>
+            <a href="#booking" class="btn">Book Your Journey</a>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2 class="section-title">Book Your Journey</h2>
+        <p class="subtitle">
+            Enter your travel details to plan your trip.
+        </p>
+
+        <form class="booking-form" action="#services" method="get">
+
+            <div class="form-group">
+                <label for="source">Source City *</label>
+                <input type="text" id="source" name="source"
+                       placeholder="Enter departure city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination City *</label>
+                <input type="text" id="destination" name="destination"
+                       placeholder="Enter destination city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departure">Departure Date *</label>
+                <input type="date" id="departure" name="departure"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="return">Return Date</label>
+                <input type="date" id="return" name="return_date">
+            </div>
+
+            <div class="form-group">
+                <label for="transport">Travel Mode *</label>
+                <select id="transport" name="transport" required>
+                    <option value="">Select travel mode</option>
+                    <option value="bus">Bus</option>
+                    <option value="train">Train</option>
+                    <option value="flight">Flight</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="passengers">Number of Passengers *</label>
+                <select id="passengers" name="passengers" required>
+                    <option value="1">1 Passenger</option>
+                    <option value="2">2 Passengers</option>
+                    <option value="3">3 Passengers</option>
+                    <option value="4">4 Passengers</option>
+                    <option value="5">5 Passengers</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="btn">
+                    Search Services
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <section id="services" class="light-section">
+        <h2 class="section-title">Available Travel Services</h2>
+        <p class="subtitle">
+            Compare example services, journey durations, and fares.
+        </p>
+
+        <div class="service-container">
+
+            <article class="service-card">
+                <div class="service-icon">🚌</div>
+                <h3>Express Bus</h3>
+                <p>Comfortable road travel</p>
+                <p><strong>Duration:</strong> 6 hours</p>
+                <p><strong>Departure:</strong> 08:00 AM</p>
+                <p class="fare">₹650 / passenger</p>
+                <a href="#seats" class="btn">Choose Bus</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🚆</div>
+                <h3>Superfast Train</h3>
+                <p>Convenient rail journey</p>
+                <p><strong>Duration:</strong> 5 hours</p>
+                <p><strong>Departure:</strong> 09:30 AM</p>
+                <p class="fare">₹450 / passenger</p>
+                <a href="#seats" class="btn">Choose Train</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Domestic Flight</h3>
+                <p>Fast air travel</p>
+                <p><strong>Duration:</strong> 1 hour</p>
+                <p><strong>Departure:</strong> 11:00 AM</p>
+                <p class="fare">₹3,500 / passenger</p>
+                <a href="#seats" class="btn">Choose Flight</a>
+            </article>
+
+        </div>
+
+        <p class="notice">
+            Sample services and fares for demonstration only.
+            Actual schedules, prices, and availability may differ.
+        </p>
+    </section>
+
+    <section id="fares">
+        <h2 class="section-title">Fare Comparison</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Travel Mode</th>
+                        <th>Duration</th>
+                        <th>Fare per Person</th>
+                        <th>Facilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Express Bus</td>
+                        <td>6 Hours</td>
+                        <td>₹650</td>
+                        <td>Reclining Seats</td>
+                    </tr>
+                    <tr>
+                        <td>Superfast Train</td>
+                        <td>5 Hours</td>
+                        <td>₹450</td>
+                        <td>Reserved Seating</td>
+                    </tr>
+                    <tr>
+                        <td>Domestic Flight</td>
+                        <td>1 Hour</td>
+                        <td>₹3,500</td>
+                        <td>Cabin Baggage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="passenger" class="light-section">
+        <h2 class="section-title">Passenger Details</h2>
+
+        <form class="booking-form" action="#seats" method="get">
+
+            <div class="form-group">
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email"
+                       placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Passenger Age *</label>
+                <input type="number" id="age" name="age"
+                       min="1" max="120" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender (optional)</label>
+                <select id="gender" name="gender">
+                    <option value="">Select option</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">
+                        Prefer not to say
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="idtype">Identity Document</label>
+                <select id="idtype" name="idtype">
+                    <option value="">Select document type</option>
+                    <option value="passport">Passport</option>
+                    <option value="driving-license">Driving Licence</option>
+                    <option value="other">Other accepted ID</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="btn">
+                    Continue to Seat Selection
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <section id="seats">
+        <h2 class="section-title">Choose Your Seat</h2>
+        <p class="subtitle">
+            Select an available seat in this sample bus layout.
+        </p>
+
+        <div class="seat-layout">
+            <div class="driver">🚍 Driver</div>
+
+            <div class="seat-legend">
+                <span><i class="available"></i> Available</span>
+                <span><i class="selected"></i> Selected</span>
+                <span><i class="booked"></i> Unavailable</span>
+            </div>
+
+            <div class="bus-seats">
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="A1">
+                    <span>A1</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="A2">
+                    <span>A2</span>
+                </label>
+                <div class="aisle"></div>
+                <label class="seat unavailable">
+                    <input type="checkbox" disabled>
+                    <span>A3</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="A4">
+                    <span>A4</span>
+                </label>
+
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="B1">
+                    <span>B1</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="B2">
+                    <span>B2</span>
+                </label>
+                <div class="aisle"></div>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="B3">
+                    <span>B3</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="B4">
+                    <span>B4</span>
+                </label>
+
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="C1">
+                    <span>C1</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="C2">
+                    <span>C2</span>
+                </label>
+                <div class="aisle"></div>
+                <label class="seat unavailable">
+                    <input type="checkbox" disabled>
+                    <span>C3</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="C4">
+                    <span>C4</span>
+                </label>
+
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="D1">
+                    <span>D1</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="D2">
+                    <span>D2</span>
+                </label>
+                <div class="aisle"></div>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="D3">
+                    <span>D3</span>
+                </label>
+                <label class="seat">
+                    <input type="checkbox" name="seat" value="D4">
+                    <span>D4</span>
+                </label>
+            </div>
+
+            <p class="seat-note">
+                Green seats are available. Grey seats are unavailable.
+                Selected seats turn blue.
+            </p>
+
+            <a href="#contact" class="btn">Continue to Booking</a>
+        </div>
+    </section>
+
+    <section id="contact" class="light-section">
+        <h2 class="section-title">Contact TravelGo</h2>
+
+        <div class="contact-card">
+            <p><strong>Email:</strong> support@travelgo.example</p>
+            <p><strong>Phone:</strong> +91 12345 67890</p>
+            <p><strong>Support:</strong> Travel booking assistance</p>
+        </div>
+    </section>
+
+    <footer>
+        <h3>✈ TravelGo</h3>
+        <p>Travel Smart. Travel Safe. Travel Happy.</p>
+        <p>&copy; 2026 TravelGo. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
